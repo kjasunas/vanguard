@@ -1,7 +1,8 @@
-/* CSS BY YOUR NAME */
+/* CSS BY Kiara Jasunas */
 
 /* IMPORTED FONTS*/
-/* IMPORT "INTER" FROM GOOGLE FONTS"
+/* IMPORT "INTER" FROM GOOGLE FONTS"*/
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Metamorphous&display=swap');
 
 /* CSS RESET */
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -63,8 +64,215 @@ table {
 }
 
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
+header{
+    background-color: var(--black);
+    font-family: Inter;
+    color: var(--blue);
+    padding: 1vw;
+    border-bottom: var(--blue) solid 10px;
+    border-image: linear-gradient(var(--blue), var(--black));
+    border-image-slice: 200;
+    font-size: 7vw;
+    font-weight: bold;
+}
+nav{
+    background-color: var(--black);
+}
+nav ul{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    text-align: center;
+    max-height: 0;
+}
+nav h2{
+    visibility: hidden;
+    height: 1px;
+}
+nav li a{
+    display: block;
+    font-family: Inter;
+    font-size: 4vw;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--white);
+    text-decoration: none;
+}
+nav a:hover, nav input:hover{
+    background-color: var(--blue);
+}
+nav label{
+    cursor: pointer;
+    display: inline-block;
+    padding: 1.5rem;
+    user-select: none;
+}
+label span{
+    background-color: var(--white);
+    display: block;
+    height: .25rem;
+    position: relative;
+    transition: background-color .3s ease-out;
+    width: 2rem;
+    top: -20vw;
+    left: 65vw;
+}
+label span:before, label span:after{
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transform: all .2s ease-out;
+    width: 100%;
+}
+label span:before{
+    top: .75rem;
+}
+label span:after{
+    top: -.75rem;
+}
+input{
+    display:none;
+}
+input:checked ~ ul{
+    max-height: 500px;
+}
+input:checked ~ label span{
+    background: transparent;
+}
+input:checked ~ label span:before{
+    transform: rotate(-45deg);
+}
+input:checked ~ label span:after{
+    transform: rotate(45deg);
+}
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after{
+    top:0;
+}
+
+#innov{
+    color: var(--white);
+}
+h2{
+    font-size: 6vw;
+    font-family: Inter;
+    font-weight: bold;
+    padding: 5vw;
+}
+p{
+    font-family: Inter;
+    font-size: 3vw;
+    line-height: 4vw;
+    padding: 3vw;
+}
+#innov a{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 4vw;
+    background-color: var(--blue);
+    padding: 4vw;
+    border-radius: 10px;
+    font-weight: bold;
+}
+h3{
+    font-size: 4vw;
+    font-family: Inter;
+    font-weight: bold;
+    padding: 5vw 5vw 2vw;
+}
+#offers div{
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 10px;
+    margin: 3vw;
+}
+#results{
+    background-color: var(--blue);
+    padding: 1rem;
+    color: var(--white);
+}
+#results h3{
+    font-size: 6vw;
+}
+table{
+    background-color: var(--black);
+    width: 100%;
+    text-align: center;
+    font-family: Inter;
+    table-layout: fixed;
+    margin: 0 auto;
+    border-collapse: collapse;
+    min-width: 400px;
+}
+tr, thead{
+    border: 1px solid var(--charcoal);
+}
+th, td{
+    border: 1px solid var(--charcoal);
+    padding: 3vw;
+}
+th{
+    font-weight: bold;
+}
+tbody tr:nth-child(even){
+    background-color: var(--charcoal);
+}
+thead th:nth-child(1){
+    width: 20%;
+}
+thead th:nth-child(2){
+    width: 50%;
+}
+thead th:nth-child(3){
+    width: 30%;
+}
+footer{
+    background-color: var(--black);
+    color: var(--white);
+}
+#contact h2{
+    padding: 5vw 10vw;
+}
+#contact p{
+    padding: 2vw 8vw;
+}
+form input, textarea{
+    width: 100%;
+    margin: 1vw 0;
+    padding: 3vw 7vw;
+    box-sizing: border-box;
+    border: 3px solid var(--blue);
+    display: block;
+}
+input[type="submit"]{
+    background-color: var(--blue);
+    width: 90%;
+    color: var(--white);
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 4vw;
+    font-weight: bold;
+    border-radius: 10px;
+}
+#copyright{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    line-height: 1vw;
+}
+#copyright a{
+    color: var(--blue);
+}
+
 
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
+body{
+    min-width: 400px;
+}
 
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
@@ -74,7 +282,7 @@ table {
 }
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
- {
+#innov{
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
     height: 80vh;
     display: grid;
@@ -83,11 +291,10 @@ table {
     padding: 1rem;
     overflow: hidden;
 }
-
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
- {
+h1::before{
     content: "";
-
+    display: inline-block;
     left:-.5rem;
     width: 3.75rem;
     height: 3.75rem;
@@ -113,7 +320,7 @@ table {
     background: var(--charcoal);
     border-radius: 10px;
     position: relative;
-    transition: ;
+    transition: height;
     height: 0;
 }
 /* THIS ONE IS DONE FOR YOU */
@@ -142,7 +349,41 @@ table {
 
 
 /* MEDIA QUERIES (MEDIUM) */ 
-
+@media screen and (min-width: 800px){
+    header{
+        grid-template-columns: 1fr 1fr;
+    }
+    h1{
+        width: 50%;
+    }
+    nav{
+        width: 50%;
+    }
+    nav ul{
+        overflow: visible;
+        position: absolute;
+        top: 2vw;
+        left: 40vw;
+        display: grid;
+        grid-template-columns: 20vw 20vw 20vw;
+    }
+    nav li a{
+        display: inline-block;
+        font-size: 3vw;
+    }
+    label span, input{
+        display: none;
+    }
+    #offers{
+        grid-template-columns: 1fr 1fr;
+        flex-direction: row;
+    }
+    #offers h2{
+        grid-area: span 2;
+    }
+    #offers .container{
+        width: 50%;
+    }
     #results {
         grid-template-columns: 1fr 1fr;
     }
@@ -156,6 +397,24 @@ table {
     .bar-chart {
         width: 50%;
     }
-
+}
 
 /* MEDIA QUERIES (LARGE) */
+@media screen and (min-width: 1024px){
+    #offers{
+        grid-template-columns: 1fr 1fr 1fr;
+        flex-direction: row;
+    }
+    #offers h2{
+        grid-area: span 3;
+    }
+    #offers .container{
+        width: 30%;
+    }
+    form{
+        grid-template-columns: 1fr 1fr;
+    }
+    form p, input[type="submit"]{
+        width: 50%;
+    }
+}
